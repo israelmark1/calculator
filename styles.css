@@ -20,7 +20,7 @@ body{
     max-width: 400px;
     border-radius: 10px;
     grid-template-columns: repeat(4,minmax(auto, 15rem));
-    grid-template-rows: minmax(5rem,auto) repeat(5, minmax(2rem,20rem));
+    grid-template-rows: minmax(5rem,auto) repeat(5, minmax(2rem,2rem));
 
     
 }
