@@ -18,7 +18,6 @@ body{
     box-shadow: 0 0 50px black;
     border: 10px solid rgb(2, 1, 1);
     max-width: 400px;
-    max-height: 80vh;
     border-radius: 10px;
     grid-template-columns: repeat(4,minmax(auto, 15rem));
     grid-template-rows: minmax(5rem,auto) repeat(5, minmax(2rem,20rem));
