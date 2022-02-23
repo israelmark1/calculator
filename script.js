@@ -3,13 +3,15 @@ class Calculator{
         this.previousOperandTextElement = previousTextElement
         this.currentOperandTextElement = currentTextElement
         this.clear()
+    
     }
 
 clear(){
-    this.currentOperand = ''
+    this.currentOperand = '0'
     this.previuosOperand = ''
     this.operation = undefined
-    this.previousOperandTextElement.innerText = ""
+    this.previousOperandTextElement.innerText = ''
+   
 }
 
 delete(){
@@ -58,6 +60,7 @@ this.operation = undefined
 this.previuosOperand = ""
 }
 updateDisplay(){
+    if(this.currentOperand == "")return this.currentOperandTextElement.innerText = 0
     this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand)
     if(this.operation != null){
         this.previousOperandTextElement.innerText =  this.getDisplayNumber(this.previuosOperand) + " " + this.operation
@@ -77,13 +80,13 @@ getDisplayNumber(number){
 }
 }
 
-const numberButtons = document.querySelectorAll('[data-number]')
-const operationButtons = document.querySelectorAll('[data-operatoin]')
-const equalsButton = document.querySelector('[data-equals]')
-const deleteButton = document.querySelector('[data-delete]')
-const allClearButton = document.querySelector('[data-all-clear]')
-const previousOperandTextElement = document.querySelector('[data-previous-operand]')
-const currentOperandTextElement = document.querySelector('[data-current-operand]')
+const numberButtons = document.querySelectorAll("#number")
+const operationButtons = document.querySelectorAll('#operatoin')
+const equalsButton = document.querySelector('#equals')
+const deleteButton = document.querySelector('#delete')
+const allClearButton = document.querySelector('#all-clear')
+const previousOperandTextElement = document.querySelector('#previous-operand')
+const currentOperandTextElement = document.querySelector('#current-operand')
 
 const calculator = new Calculator(previousOperandTextElement,
     currentOperandTextElement)
